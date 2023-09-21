@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>孙Py的网站</title>
+    <style>
+        /* 添加样式以实现背景虚化 */
+        .popup-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* 背景半透明 */
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>欢迎来到孙Py的网站</h1>
+    </header>
+    <section id="about">
+        <h2>关于我</h2>
+        <p>我是孙Py，石室天府中学高三五班的学生，生日是9月21日。</p>
+    </section>
+    <section id="book">
+        <h2>瑟拜传奇</h2>
+        <div class="chapter" onclick="showChapter(1)">第一章</div>
+        <div class="chapter" onclick="showChapter(2)">第二章</div>
+        <div class="chapter" onclick="showChapter(3)">第三章</div>
+        <!-- 继续添加章节 -->
+    </section>
+    
+    <!-- 弹出展示框 -->
+    <div class="popup-background" id="popup">
+        <div class="popup-content">
+            <button onclick="closePopup()">关闭</button>
+            <div id="chapter-content">
+                <!-- 这里将显示章节内容 -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 孙Py</p>
+    </footer>
+
+    <script>
+        function showChapter(chapterNumber) {
+            // 根据章节号加载相应的内容，这里假设使用文本内容
+            var chapterContent = "这是第" + chapterNumber + "章的内容。";
+            document.getElementById("chapter-content").innerText = chapterContent;
+
+            // 显示弹出框
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup() {
+            // 关闭弹出框
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+</body>
+</html>
