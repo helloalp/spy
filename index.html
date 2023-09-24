@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>spy的网站</title>
+    <title>瑟拜传奇</title>
     <style>
         /* 添加样式以实现背景虚化 */
         .popup-background {
@@ -15,6 +15,7 @@
             display: none;
             justify-content: center;
             align-items: center;
+            z-index: 1; /* 以确保弹出框在顶部显示 */
         }
         .popup-content {
             background-color: white;
@@ -26,18 +27,16 @@
 </head>
 <body>
     <header>
-        <h1>欢迎来到孙Py的网站</h1>
+        <h1>瑟拜传奇</h1>
     </header>
-    <section id="about">
-        <h2>关于我</h2>
-        <p>我是孙Py，石室天府中学高三五班的学生，生日是9月21日。</p>
-    </section>
-    <section id="book">
-        <h2>瑟拜传奇</h2>
-        <div class="chapter" onclick="showChapter(1)">第一章</div>
-        <div class="chapter" onclick="showChapter(2)">第二章</div>
-        <div class="chapter" onclick="showChapter(3)">第三章</div>
-        <!-- 继续添加章节 -->
+    <section id="table-of-contents">
+        <h2>目录</h2>
+        <ul>
+            <li><a href="javascript:void(0);" onclick="showChapter(1)">第一章</a></li>
+            <li><a href="javascript:void(0);" onclick="showChapter(2)">第二章</a></li>
+            <li><a href="javascript:void(0);" onclick="showChapter(3)">第三章</a></li>
+            <!-- 添加更多章节 -->
+        </ul>
     </section>
     
     <!-- 弹出展示框 -->
@@ -57,7 +56,7 @@
     <script>
         // JavaScript对象存储不同章节的内容
         var chapterContents = {
-            1: "房间内弥漫着黑暗，一切皆模糊难辨。四周静寂无声，时光似乎在此停滞，等待已久，终于迎来一声“叮铃铃铃”的刺耳铃声。
+            1: `房间内弥漫着黑暗，一切皆模糊难辨。四周静寂无声，时光似乎在此停滞，等待已久，终于迎来一声“叮铃铃铃”的刺耳铃声。
 
 一个身影若隐若现，似乎伸出一只手，声音骤然戛然而止。他缓缓睁开双眼，起床站立，取起床头柜上的水壶，咕噜咕噜喝了几口，然后将水壶轻轻放回原处。
 
@@ -81,7 +80,7 @@
 
 房门咔哒一声关上，整个宽敞的屋内再次陷入黑暗。只有已经定时的电饭煲和冰箱的显示屏散发出微弱的光芒。墙壁上的时钟，秒针有序地嗒嗒转动，发出细微而有规律的声音。
 
-夜幕与黑暗似乎重新笼罩了整个房子，一切都沉寂下来，似乎未曾发生什么事，也没有痕迹表明他们曾在此居住过......",
+夜幕与黑暗似乎重新笼罩了整个房子，一切都沉寂下来，似乎未曾发生什么事，也没有痕迹表明他们曾在此居住过...... `,
             2: "这是第二章的内容。",
             3: "这是第三章的内容。"
             // 继续添加其他章节的内容
